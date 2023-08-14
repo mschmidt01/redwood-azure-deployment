@@ -1,5 +1,8 @@
 {
   "private": true,
+  "scripts": {
+    "start": "yarn rw serve api"
+  },
   "workspaces": {
     "packages": [
       "api",

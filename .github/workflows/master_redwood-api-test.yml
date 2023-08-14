@@ -21,10 +21,6 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build, and test
-        run: |
-          yarn install
-          yarn rw build api
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2

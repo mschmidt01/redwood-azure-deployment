@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "start": "yarn rw serve api"
+    "start": "yarn install && yarn rw build api && yarn rw serve api"
   },
   "workspaces": {
     "packages": [

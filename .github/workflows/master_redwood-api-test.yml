@@ -49,12 +49,4 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AE6F692A8C8B45568B9AAEB2CF4FB262 }}
           package: .
-
-      - name: SSH into Azure Web App
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Install dependencies and build
-        run: |
-          az webapp ssh --resource-group Redwood-Test --name redwood-api-test --slot Production --command "yarn install && yarn rw build api"
+          startup-command: 'yarn install && yarn rw build api'

@@ -35,6 +35,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'redwood-api-test'
-        package: './api/dist'
+        package: 'api/dist'
         slot-name: 'Production'
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AE6F692A8C8B45568B9AAEB2CF4FB262 }}

@@ -1,5 +1,14 @@
 {
   "navigationFallback": {
-      "rewrite": "/index.html"
-  }
+    "rewrite": "/index.html",
+    "exclude": ["*.{svg,png,jpg,gif}", "*.{css,scss}", "*.js"]
+  },
+  "routes": [
+    {
+      "route": "/data/info.json",
+      "headers": {
+        "cache-control": "no-store"
+      }
+    }
+  ]
 }

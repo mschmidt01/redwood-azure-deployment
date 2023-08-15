@@ -107,8 +107,9 @@ if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
 fi
 
 # 2. Select node version
-selectNodeVersion
-
+#selectNodeVersion NPM_CMD=npm NODE_EXE=node
+NPM_CMD=npm
+NODE_EXE=node
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd "$DEPLOYMENT_TARGET"

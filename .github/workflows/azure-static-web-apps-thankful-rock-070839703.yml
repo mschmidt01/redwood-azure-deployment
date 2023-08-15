@@ -30,7 +30,7 @@ jobs:
           app_location: '/' # App source code path
           # api_location: 'api/dist' # Api source code path - optional
           output_location: 'web/dist' # Built app content directory - optional
-          app_build_command: yarn rw build web && yarn run build:add-spinner
+          app_build_command: yarn rw build web
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'

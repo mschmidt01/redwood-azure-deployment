@@ -25,7 +25,7 @@ jobs:
         run: |
           yarn install
           yarn rw prisma generate
-          yarn build api
+          yarn rw build api
 
       - name: Gzip API build
         run: |

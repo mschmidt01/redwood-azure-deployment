@@ -36,6 +36,14 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
+      - name: Authenticate with Azure and configure startup file
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - run: |
+          az webapp config set --resource-group Redwood-Test --name redwood-api-test --linux-fx-version "NODE|18-lts"
+          az webapp config set --resource-group Redwood-Test --name redwood-api-test --startup-file "./startup.sh"
+
       - name: Download artifact from build job
         uses: actions/download-artifact@v2
         with:

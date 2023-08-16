@@ -1,3 +1,0 @@
-Might be necessary if deployment doesnt work out of box:
-az webapp config set --resource-group <resource-group-name> --name <app-name> --linux-fx-version "NODE|18-lts"
-az webapp config set --resource-group <resource-group-name> --name <app-name> --startup-file "yarn install && yarn rw build api && yarn rw serve api"

@@ -51,4 +51,4 @@ jobs:
           app-name: 'redwood-api-test'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AE6F692A8C8B45568B9AAEB2CF4FB262 }}
-          package: deploy
+          package: .

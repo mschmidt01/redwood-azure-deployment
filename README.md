@@ -1,5 +1,6 @@
 # README
 
+
 In order to deploy the application, you need to execute the following commands after you have created the resource group and the web app:
 
 ```

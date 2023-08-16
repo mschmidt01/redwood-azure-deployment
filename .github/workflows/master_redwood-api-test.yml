@@ -23,9 +23,7 @@ jobs:
 
       - name: yarn install
         run: |
-          yarn install
-          yarn rw prisma generate
-          yarn rw build api
+          yarn install --frozen-lockfile
 
 
       - name: Upload artifact for deployment job

@@ -23,4 +23,4 @@ WORKDIR /app/api
 # WEBSITES_PORT=8911 in Azure Web Apps
 EXPOSE 8911
 
-ENTRYPOINT [ "yarn", "rw", "serve", "api" ]
+ENTRYPOINT [ "yarn", "rw", "serve", "api", "--port", "8911", "--rootPath", "/api" ]

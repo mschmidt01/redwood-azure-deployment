@@ -21,6 +21,6 @@ jobs:
 
     - uses: azure/webapps-deploy@v2
       with:
-        app-name: 'myapp'
+        app-name: 'redwood-api-docker-test'
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AE6F692A8C8B45568B9AA2342342432 }}
         images: 'ebafunctions.azurecr.io/api-test:${{ github.sha }}'
